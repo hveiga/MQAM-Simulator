@@ -1,0 +1,60 @@
+M-QAM Simulator -- ETSIT-UPM LTDS 2010-2011
+
+M-QAM Simulator on Matlab. Simulates digital data modulated with M-QAM 
+passing through an AWGN channel.
+
+Authors:
+  Luis Antonio Úbeda Medina (lubeme23@gmail.com)
+  Héctor Veiga Ortiz (hveiga@hawk.iit.edu)
+
+Copyright 2010 Héctor Veiga Ortiz and Luis Antonio Úbeda Medina.
+
+M-QAM Simulator is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+ 
+M-QAM Simulator is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with M-QAM Simulator.  If not, see <http://www.gnu.org/licenses/>.
+
+-------------
+
+QUICK GUIDE:
+
++ M-QAM_Simulation.m
+  
+  It simulates the system and estimates a BER for an SNR given. Type of 
+  M-QAM used is selected as well.
+  Input data:
+
+	- longitud: amount of bits to be tested
+	- M: deepness of modulation. 1 = 4-QAM, 2 = 16-QAM, 3 = 64-QAM, ..
+	- SNR: Signal Noise Ratio for the AWGN channel in dB.
+
+	Example: M-QAM_Simulation(100,2,10)
+
++ M-QAM_Election.m
+
+  It analyses several QAM modulation schemas to choose the one which 
+  gives us more binary speed. SNR of channel and a max BER are given.
+  Input data:
+
+	- SNR - Signal Noise Ratio for the AWGN Channel in dB. 
+	- BitErr - Maximun BER allowed.
+	
+	Example: M-QAM_Election(5,0.01)
+
++ M-QAM_Comparison.m
+
+  It analyses several QAM modulation schemas returning the Bit Error Rate
+  from each one. SNR is given.
+  Input data:
+
+	- SNR - Signal Noise Ratio for the AWGN Channel in dB.
+
+	Example: M-QAM_Comparison(5)
